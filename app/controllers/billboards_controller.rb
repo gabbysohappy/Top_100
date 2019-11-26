@@ -6,20 +6,25 @@ class BillboardsController < ApplicationController
   end
 
   def show
-    @billboard = Billboard.find(params[:id])
+    set_billboard
   end
   
   def create
-    @billboard = billboards.new(params[billboard_params])
+    @billboard = Billboard.new(params[billboard_params])
+    if @billboard.save
+      redirect_to @billboard
+    else
+      render :new
+    end
   end
   
   def new
-    @billboard = Billboard.new()
-    render partial: 'form'
+    @billboard = Billboard.new
+    # render partial: 'form'
   end
 
   def edit
-    render partial: 'form'
+    # render partial: 'form'
   end
 
   def destroy
@@ -32,4 +37,9 @@ class BillboardsController < ApplicationController
      def billboard_params
         params.require(:billboard).permit(:name, :region, :rank, :genre)
      end 
+
+     def set_billboard
+      @billboard = Billboard.find(params[:id])
+    end
+
 end
