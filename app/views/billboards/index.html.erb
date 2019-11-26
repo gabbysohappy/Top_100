@@ -1,4 +1,11 @@
 <h1>Billboards Home</h1>
-
-<%= link_to  "Create a Billboard", new_billboard_path %>
-
+<br />
+<h2><%= link_to 'Create a New Billboard', new_billboard_path %></h2>
+<br />
+<ul> List of Billboards:
+  <% @billboards.each do |billboard| %>
+    <li>
+      <%= link_to "#{billboard.region} #{billboard.name} #{billboard.genre}", billboard %>
+    </li>
+  <% end %>
+</ul>
