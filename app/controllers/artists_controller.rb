@@ -24,6 +24,14 @@ class ArtistsController < ApplicationController
   def edit
   end
 
+  def update
+    if  @artist.update(artist_params)
+      redirect_to @artist
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @artist.destroy
     redirect_to artists_path(@artist)

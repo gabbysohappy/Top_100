@@ -26,6 +26,14 @@ class BillboardsController < ApplicationController
   def edit
   end
 
+  def update
+    if  @billboard.update(billboard_params)
+      redirect_to @billboard
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @billboard.destroy
     redirect_to billboards_path(@billboard)
