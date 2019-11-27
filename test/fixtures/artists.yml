@@ -3,9 +3,7 @@
 one:
   name: MyString
   genre: MyString
-  rank.int: MyString
 
 two:
   name: MyString
   genre: MyString
-  rank.int: MyString

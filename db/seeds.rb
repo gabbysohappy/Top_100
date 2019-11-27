@@ -17,12 +17,11 @@
 # end
 # puts 'Data is seeded'
 
-10.times do
-  Billboard.create( 
-    name: 'Top 100',
-    region: Faker::Nation.nationality,
-    genre: Faker::Music.genre,
-  )
-end
-
-  puts "Finished Seeding"
+    10.times do
+      Billboard.create( 
+        name: 'Top 100',
+        region: Faker::Nation.nationality,
+        genre: Faker::Music.genre,
+      )
+    end
+      puts "Finished Seeding"
