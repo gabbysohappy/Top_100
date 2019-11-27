@@ -1,24 +1,22 @@
-# README
+Basic Objectives:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create a new rails app and make sure you make it a git repo and have a github repo linked to it
+Billboard Model   has_many artists ex.  top 100 us, top 100 euro, top 50, ect...
+Artist Model - belongs_to billboard  and has_many songs
+Song Model - belongs_to artist (Links to an external site.)
+Have Validations for each model
+All CRUD actions for each Table
+Fill out all the controllers
+Fill out the views
+This is going to use nested routes for easier use of controller data flow
 
-Things you may want to cover:
+Bonus Objectives:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Add A navbar and footer
+Add Static pages
+refactor the Song Model - belongs_to artist, belongs_to billboard (HINT: since Rails 5 you'll need to use optional: true on your association because a song is not always going to belong to a billboard) - http://blog.bigbinary.com/2016/02/15/rails-5-makes-belong-to-association-required-by-default.html
+Add any other models that you see fit to make it a more robust application
+Have the ability to play/preview the songs (there are many gems out there that let you interact with iTunes or Spotify or Soundcloud)
+DRY up any code and do a full refactor of anything to make the code the cleanest you can
+Ability to move song up or down a Billboard
+Style it to make it look professional, use Bootstrap, Materialize, Foundation, Semantic UI, Etc...
