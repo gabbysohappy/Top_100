@@ -1,10 +1,13 @@
 <h1>Artists Home</h1>
 <br />
-<h2><%= link_to 'Add a New Artist', new_artist_path %></h2>
+<h2><%= link_to 'Add a new artist', new_artist_path %></h2>
 <br />
 <ul> List of Artists:
- <% @artists.each do |artist| %>
+<br />
+  <% @artists.each do |artist| %>
     <li>
-        <%= link_to "#{artist.name} #{artist.genre}", artist %>
+      <%= link_to "#{artist.name} #{artist.genre}", artist %>
     </li>
+  <% end %>
 </ul>
+
