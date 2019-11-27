@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  
   before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -32,7 +33,7 @@ class ArtistsController < ApplicationController
   private 
 
      def artist_params
-        params.require(:artist.permit(:name, :rank, :genre)
+        params.require(:artist).permit(:name, :rank, :genre)
      end 
 
      def set_artist

@@ -1,2 +1,16 @@
-<h1>Edit Billboard</h1>
-<p>Find me in app/views/billboards/edit.html.erb</p>
+<h1><%= "Edit Billboard: #{@billboard.region} #{@billboard.name} #{@billboard.genre}" %></h1>
+
+<%=form_for @billboard do |f|%>
+
+<%=f.label :name%>
+<%=f.text_field :name%>
+
+<%=f.label :region%>
+<%=f.text_field :region%>
+
+<%=f.label :genre%>
+<%=f.text_field :genre%>
+
+<%=f.submit 'Submit'%>
+
+<% end %>
