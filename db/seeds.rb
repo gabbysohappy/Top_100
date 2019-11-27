@@ -24,4 +24,19 @@
         genre: Faker::Music.genre,
       )
     end
-      puts "Finished Seeding"
+
+    10.times do
+      Artist.create( 
+        name: Faker::Music.band,
+        genre: Faker::Music.genre,
+      )
+    end
+
+    20.times do
+      Song.create( 
+        name: Faker::Book.title,
+        genre: Faker::Music.genre,
+      )
+    end
+
+    puts "Finished Seeding"
