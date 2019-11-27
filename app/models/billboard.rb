@@ -1,8 +1,6 @@
 class Billboard < ApplicationRecord
-    validates :name, uniqueness: true
+    has_many :artists 
+    has_many :albums, through: :artists
+    has_many :songs, through: :albums
     validates :name, presence: true 
-    
-    
-
-    # has_many artists 
 end
