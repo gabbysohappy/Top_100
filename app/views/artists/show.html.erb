@@ -11,7 +11,9 @@
 <br />
   <% @artist.songs.each do |song| %>
     <li>
-      <%= link_to song.name, song %>
+      <%= song.name %>
+      <%= link_to 'Add song to billboard', @song %>
+      <%= link_to 'Delete song', @song, method: :delete %>
     </li>
   <% end %>
 </ul>
