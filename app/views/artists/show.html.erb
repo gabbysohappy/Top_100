@@ -7,14 +7,15 @@
 <li><%= link_to  "Add Song", new_artist_song_path(@artist) %></li>
 </ul>
 
-<ul>Songs:
-<br />
-  <% @artist.songs.each do |song| %>
-    <li>
-      <%= song.name %>
-      <%= link_to 'Add song to billboard', @song %>
-      <%= link_to 'Delete song', @song, method: :delete %>
-    </li>
-  <% end %>
-</ul>
 
+
+<table>
+  <th>Song</th>
+  <th>Genre</th>
+  <% @artist.songs.each do |song| %>
+    <tr>
+      <td><%= link_to song.name, artist_song_path(@artist, song) %></td>
+      <td><%= song.genre %></td>
+    </tr>
+  <% end %>
+</table>
