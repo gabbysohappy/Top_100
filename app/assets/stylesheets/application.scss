@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+
+ @import 'semantic-ui';
+ @import 'artists.scss';
+ body { 
+background-color: #99C7C5;
+}
+
+h1 {
+  background-color: #47598F;
+  border: 4px solid #20267A
+}
+.div {
+color: #765687;
+}
+#link {
+  color: #527A78; 
+}
