@@ -1,5 +1,5 @@
 <nav>
-  <ul>
+  <ul >
     <li>
       <%= link_to 'View Billboards', root_path %>
     </li>
@@ -7,4 +7,5 @@
       <%= link_to 'View Artists', artists_path %>
     </li>
   </ul>
+  <%= link_to 'Log out', destroy_admin_session_path, method: :delete, class: "logout" %>
 </nav>

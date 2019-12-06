@@ -15,19 +15,41 @@
  */
 
 
- @import 'semantic-ui';
+ @import 'materialize';
  @import 'artists.scss';
+ @import 'flash';
+
  body { 
-background-color: #99C7C5;
+  background-color: #EDEDED;
+  padding: 20px 0;
 }
 
 h1 {
   background-color: #47598F;
-  border: 4px solid #20267A
+  border: 4px solid #20267A;
 }
 .div {
 color: #765687;
 }
 #link {
   color: #527A78; 
+}
+
+a:hover {
+  color: #193B8A;
+}
+ 
+nav a:hover {
+  color: #fff;
+}
+
+img {
+  max-width: 500px;
+  max-height: 500px;
+  margin: 20px 0;
+}
+
+.logout {
+  float: right;
+  margin-right: 30px;
 }
