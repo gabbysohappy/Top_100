@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'semantic-ui-sass'
 gem 'unsplash'
+gem 'devise'
 
 group :development, :test do
   gem 'pry'
