@@ -1,5 +1,9 @@
 <h1><%= "#{@billboard.region} #{@billboard.name} #{@billboard.genre}" %></h1>
-
+<ol>
+<% @billboard.songs.each do |s|%>
+<li><%= link_to s, billboard_songs_path(s)%></li>
+<%end%>
+</ol>
 <ul>
 <li><%= link_to  "Edit Billboard", edit_billboard_path %></li>
 <li><%= link_to  "Delete Billboard", @billboard, method: :delete %></li>
